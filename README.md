@@ -99,13 +99,6 @@ mvn spring-boot:run
 
 ---
 
-### 🔹 5. Verify Application
-
-Open:
-
-```
-http://localhost:8080
-```
 
 ---
 
