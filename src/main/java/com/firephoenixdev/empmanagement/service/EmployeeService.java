@@ -41,8 +41,12 @@ public class EmployeeService {
 	}
 	
 
-	public void deleteEmpByid(int id) {
-		emprepo.deleteById(id);
+	public boolean deleteEmpByid(int id) {
+	    if (emprepo.existsById(id)) {
+	        emprepo.deleteById(id);
+	        return true;
+	    }
+	    return false;
 	}
 
 	

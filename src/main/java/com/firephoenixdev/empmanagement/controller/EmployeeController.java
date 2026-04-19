@@ -73,10 +73,14 @@ public class EmployeeController {
 	}
 	
 	@DeleteMapping("/deleteEmp/{id}")
-	public ResponseEntity<String> deleteEmpByid(@PathVariable int id)
-	{
-		empservice.deleteEmpByid(id);
-		 return ResponseEntity.ok("Employee deleted successfully");
-	} 
+	public ResponseEntity<String> deleteEmpByid(@PathVariable int id) {
+	    boolean deleted = empservice.deleteEmpByid(id);
+
+	    if (deleted) {
+	        return ResponseEntity.ok("Employee deleted successfully");
+	    } else {
+	        return ResponseEntity.status(404).body("Employee not found with id: " + id);
+	    }
+	}
 
 }
