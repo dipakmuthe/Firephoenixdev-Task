@@ -8,7 +8,6 @@ It allows performing CRUD operations and searching employees by department.
 ---
 
 ## 🛠️ Tech Stack
-
 * Java
 * Spring Boot
 * MySQL
